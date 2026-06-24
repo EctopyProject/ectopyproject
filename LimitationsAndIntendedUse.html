@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ectopy Monitor – Limitations and Intended Use</title>
+  <title>Beat Timing Viewer - Limitations and Intended Use</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,58 +16,92 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   ">
-    <h1>Ectopy Monitor – Limitations and Intended Use</h1>
-    <p><strong>Last updated:</strong> June 17, 2026</p>
+    <h1>Beat Timing Viewer - Limitations and Intended Use</h1>
+    <p><strong>Last updated:</strong> June 24, 2026</p>
 
     <h2>Overview</h2>
     <p>
-      This app does not diagnose heart rhythm disorders. Diagnosis of PVCs, PACs, or any arrhythmia requires an ECG interpreted by a qualified clinician. 
-      The app is intended for people who have already been evaluated and have a known history of ectopic beats.
+      <strong>Beat Timing Viewer</strong> does not diagnose heart conditions. The app analyzes
+      <strong>beat-to-beat timing</strong> in RR intervals from compatible Bluetooth heart-rate monitors
+      and shows how successive intervals vary compared with a recent timing pattern.
+      Results are <strong>informational only</strong> and are not medical advice.
+    </p>
+    <p>
+      Timing labels shown in the app (such as short beats, duple or tuple patterns, or highly irregular
+      timing windows) describe <strong>RR timing patterns only</strong>. They are not a diagnosis of
+      any specific heart rhythm disorder.
     </p>
 
-    <h2>What the app measures</h2>
+    <h2>What the app does</h2>
+    <ul>
+      <li>Presents rolling charts, session summaries, and exportable beat lists from RR-interval data.</li>
+      <li>Works with widely available consumer chest-strap heart-rate monitors that provide RR-interval data.</li>
+      <li>Supports observation of timing and rhythm trends over a session or across saved sessions.</li>
+      <li>Enables collection, saving, and optional export of beat-to-beat timing data on the device.</li>
+      <li>Separates <strong>automatic timing classifications</strong> from <strong>user-entered notes</strong> in exported data files.</li>
+    </ul>
+
+    <h2>What the app does not do</h2>
+    <ul>
+      <li>It is <strong>not</strong> an ECG/EKG.</li>
+      <li>It is <strong>not</strong> a Holter monitor or medical device.</li>
+      <li>It does <strong>not</strong> identify or diagnose any specific heart rhythm disorder or clinical condition.</li>
+      <li>It does <strong>not</strong> determine clinical significance or provide medical advice.</li>
+      <li>It does <strong>not</strong> interpret Poincare plots or other visualizations beyond displaying the data.</li>
+    </ul>
+
+    <h2>What RR timing analysis can reflect</h2>
     <p>
-      The app analyzes RR intervals from a chest strap heart rate monitor. Certain types of ectopic beats, especially PVCs, create distinctive RR patterns that can be detected reliably without an ECG. These include:
+      When beat-to-beat timing changes in clear, repeating ways, RR-interval analysis can highlight patterns such as:
     </p>
     <ul>
-      <li>premature short RR intervals</li>
-      <li>compensatory pauses</li>
-      <li>repeating bigeminy or trigeminy patterns</li>
-      <li>ectopic couplets and triplets with clear RR signatures</li>
+      <li><strong>Short beats</strong> - RR intervals classified as shorter than the rolling baseline used for comparison.</li>
+      <li><strong>Recurring timing patterns</strong>, such as duple or tuple rhythms (roughly every second or third beat).</li>
+      <li><strong>Highly irregular timing windows</strong>, where classification may be less reliable.</li>
     </ul>
     <p>
-      When these patterns are present, RR based detection is strong and consistent.
+      Session summaries may also show rolling <strong>short beat ratio</strong> thresholds (for example, ratio above 10%, 15%, or 20% in a rolling window). These are timing statistics only; the app does not interpret their clinical meaning.
     </p>
 
-    <h2>What the app cannot measure</h2>
+    <h2>What RR timing alone cannot establish</h2>
     <p>
-      Some atrial ectopic beats do not produce a detectable change in RR timing. These include:
-    </p>
-    <ul>
-      <li>interpolated PACs</li>
-      <li>PACs with concealed conduction</li>
-      <li>P wave only events</li>
-      <li>atrial tachycardias without RR perturbation</li>
-    </ul>
-    <p>
-      These events require ECG morphology and cannot be identified from RR data alone. This is a limitation of all RR based methods, not just this app.
+      RR-interval data records <strong>when</strong> beats occur, not the electrical shape of each beat.
+      Not every rhythm change produces a clear or distinguishable change in RR timing alone.
+      These limits apply to RR-based methods in general, not only to this app.
+      Symptoms or clinical concerns warrant consultation with a qualified healthcare professional
+      and appropriate clinical testing as recommended.
     </p>
 
     <h2>Intended use</h2>
     <p>
-      This app is designed for monitoring, not diagnosis. It is useful for people who:
+      This app is intended for <strong>informational and wellness purposes only</strong>. Typical uses include:
     </p>
     <ul>
-      <li>already know they have PVCs or frequent ectopy</li>
-      <li>want to track burden over time</li>
-      <li>want to see how ectopy changes with sleep, stress, exercise, caffeine, or medication</li>
-      <li>want to identify patterns, triggers, or trends</li>
-      <li>want a lightweight continuous tool that complements, rather than replaces, ECG based evaluation</li>
+      <li>Observing how beat-to-beat timing varies during everyday activities.</li>
+      <li>Tracking timing patterns over time and comparing saved sessions.</li>
+      <li>Adding session notes and reviewing them alongside exported timing data.</li>
+      <li>Preparing questions or material for discussions with a healthcare provider.</li>
     </ul>
-
-    <h2>Clinical positioning</h2>
     <p>
-      RR based analysis is not a substitute for ECG, but it is a valid and practical method for tracking ectopic burden once the underlying rhythm has been identified. PVCs in particular have a well defined RR signature, which makes them suitable for RR based monitoring.
+      The app is a consumer timing tool that may complement personal logs, session notes, and other records kept outside the app; it does not replace professional evaluation when that is needed.
+    </p>
+
+    <h2>Exported data</h2>
+    <p>
+      When beat data is shared from the app, exported files include automatic <strong>Classification</strong>
+      tags and a separate <strong>User note</strong> column for manually entered text. Classification tags are generated
+      by the app's timing analysis; user notes reflect manual entry only. Both are provided for personal review and
+      record-keeping; neither constitutes a medical report.
+    </p>
+    <p>
+      When files are exported or shared outside the app, timing and heart-rate data may be visible to others or
+      third-party services. Sharing to trusted destinations remains at the exporter's discretion and risk.
+    </p>
+
+    <h2>Changes to this document</h2>
+    <p>
+      This page may be updated as the app's data formats or user-facing descriptions change. The
+      <strong>Last updated</strong> date at the top reflects the most recent revision.
     </p>
 
   </div>
